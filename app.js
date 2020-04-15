@@ -93,10 +93,12 @@ class Movies{
      }
     
    async getPopularMovie(){
-        console.log(mo)
-
-        
+        return mo;
      }
+
+    updatePopular(){
+       console.log(popular_movies)
+    }
 
 }
 
