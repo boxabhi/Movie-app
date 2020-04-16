@@ -1,58 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          Movie App
-        </a>
-      </nav>
-   
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="./assest/owl.carousel.min.css" rel="stylesheet">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Movie App
+    </a>
+  </nav>
+
+
+
+  <div class="container">
+    <h6 class="text-uppercase mt-5 mb-3 font-weight-bolder text-warning">Popular searches</h6>
+    <div class="container">
+      <div class="row" id="popular_movies">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <h6 class="text-uppercase mt-5 mb-3 font-weight-bolder text-warning">Popular Movies</h6>
+
+    <div class=" d-flex">
+
+      <div class="item p-2">
+        <img src="img/banner-one.jpg" style="width:630px; height: 220px;">
+
+      </div>
+      <div class="item p-2">
+        <img src="img/avengers-endgame-chinese-poster.jpeg" style="width: 630px; height: 220px;"">
+          </div>
+         
+
+      </div>
+
+      </div>
 
       <div class="container">
-        <h5 class="text-uppercase mt-5">Popular searches</h5>
-
+        <h6 class="text-uppercase mt-5 mb-3 font-weight-bolder text-warning">Popular TV Shows</h6>
         <div class="container">
-            <div id="popular_movies">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="shadow-lg bg-dark rounded" style="width:220px">
-                    <img src="https://image.tmdb.org/t/p/w500/db32LaOibwEliAmSL2jjDF6oDdj.jpg" class="card-img-top img-fluid img-responsive"  style="height:220px;width:230px">
-                    <div class="card-body">
-                      <h5 class="p-0 m-0">Frozen III</h5>
-                      <p class="p-0 m-0"><img src="star.png" style="height:14px"> 85% | Feb 20,2020</p>
-                      Actio, Thriller, Comedy
-                       </div>
-                  
-                  </div>
-                </div>
-              </div>
-             
-          
-            </div>
-
+          <div class="row" id="popular_shows">
+          </div>
         </div>
+      </div>
+
+
+      
+
+<div class=" footer mt-5 p-5">
+        <footer class="container ">
+          <div class="text-center ">
+            <h6 class="text-white font-weight-bolder mt-3">
+              <img src="logo.png" class="img-responsive" style="height: 50px;">
+
+              Movie App</h6>
+
+          </div>
+
+        </footer>
 
       </div>
 
 
+      <script src="app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+      </script>
 
+      <script src="./assest/owl.carousel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 
-    <!-- <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+      </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+      </script>
+
+</body>
+
 </html>

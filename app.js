@@ -87,25 +87,81 @@ const mo = [{
 const popular_movies = document.getElementById('popular_movies')
 
 class Movies{
+
      Movies(url, api_key){
         this.url = url;
         this.api_key = api_key;
      }
     
-   async getPopularMovie(){
-        return mo;
+    getPopularMovie(){
+   
+      var f_html = `<div class="col-lg-12 mx-auto"><div class="spinner-border text-center text-light" role="status"> <span class="sr-only">Loading...</span></div></div>`;
+      popular_movies.innerHTML = f_html
+
+      this.renderUI(mo,popular_movies)
+      // setTimeout(() => {
+      //    const get_url = `${url}?api_key=${api_key}`
+      //  fetch(get_url)
+      //   .then(response => response.json())
+      //   .then(data =>{
+      
+      //      console.log(data.results)
+          
+
+      //   })
+      //   },3000)
+      
      }
 
-    updatePopular(){
-       console.log(popular_movies)
+     getTv(){
+      var f_html = `<div class="col-lg-12 mx-auto"><div class="spinner-border text-center text-light" role="status"> <span class="sr-only">Loading...</span></div></div>`;
+      popular_movies.innerHTML = f_html
+      this.renderUI(mo,popular_movies)
+      // setTimeout(() => {
+      //    const get_url = `${url}?api_key=${api_key}`
+      //  fetch(get_url)
+      //   .then(response => response.json())
+      //   .then(data =>{
+      
+      //      console.log(data.results)
+          
+
+      //   })
+      //   },3000)
+      
+     }
+
+
+
+     }
+
+    renderUI(movies,element){
+       var html=""; 
+       for(var i = 0; i < movies.length;i++){
+          html += `<div class="col-lg-3 mt-3">
+          <div class="shadow-lg bg-dark rounded" style="width:220px">
+            <img src="https://image.tmdb.org/t/p/w500/${movies[i].poster_path}"
+              class="card-img-top img-fluid img-responsive" style="height:220px;width:230px">
+            <div class="card-body text-light">
+              <h6 class="p-0 m-0 font-weight-bolder">${movies[i].title}</h6>
+              <p class="p-0 m-0 text-monospace"><img src="star.png" style="height:14px"> ${parseInt(movies[i].vote_average)}% | ${movies[i].release_date}</p>
+              ${(movies[i].overview).substring(0,22)}
+            </div>
+          </div>
+        </div>`
+       }
+       if(movies.length > 0)
+       element.innerHTML = html
+
     }
 
 }
 
-const url = '#' ;
+const url = 'https://api.themoviedb.org/3/movie/popular' ;
 const api_key = '1b4b65c9478c6f2e1fbb2eb4d5445288';
 
 var movie = new Movies(url, api_key);
+
 movie.getPopularMovie()
 
 
